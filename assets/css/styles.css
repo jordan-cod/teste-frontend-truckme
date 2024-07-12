@@ -91,7 +91,8 @@ header nav .menu li a:hover{
     background-color: #8b8b8b7e;
     padding: 10px;
     font-weight: 500;
-    color: var(--truck-black);
+    font-size: 1.2rem;
+    color: var(--truck-white);
 }
 
 @media (max-width: 1080px) {
@@ -104,6 +105,7 @@ header nav .menu li a:hover{
 }
 @media (max-width: 920px) {
     #hero div{
+        margin-top: 150px;
         width: 90%;
     }
 }
@@ -182,5 +184,9 @@ header nav .menu li a:hover{
     header nav .menu li {
         margin-left: 0;
         margin-bottom: 10px;
+    }
+    #hero div{
+        margin-top: 100px;
+        width: 90%;
     }
 }
