@@ -94,19 +94,68 @@ header nav .menu li a:hover{
     font-size: 1.2rem;
     color: var(--truck-white);
 }
+#about{
+    width: 100%;
+    margin-top: 100px;
+    color: var(--truck-black);
+}
+#about > div{
+    width: 1080px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    font-weight: 500;
+} 
+#about > div p{
+    font-weight: 500;
+} 
+#about > div h2{
+    font-size: 2.5rem;
+} 
+#about > div h3{
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+#about > div > div{
+    display: flex;
+    align-items: center;
+    row-gap: 20px;
+    column-gap: 70px;
+}
+#about > div > div > div:first-child{
+    background-color: var(--truck-gray);
+    padding: 10px;
+    width: 250px;
+    height: 250px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 @media (max-width: 1080px) {
-    header nav{
+    header nav, #about{
         padding: 0px 15px;
     }
     #hero div h1{
         font-size: 2rem;
+    }
+    #about > div{
+        width: 100%;
     }
 }
 @media (max-width: 920px) {
     #hero div{
         margin-top: 150px;
         width: 90%;
+    }
+    #about > div, #about > div > div{
+       flex-direction: column;
+    }
+    #about > div > div:last-child{
+       flex-direction: column-reverse;
     }
 }
 @media (max-width: 768px) {
