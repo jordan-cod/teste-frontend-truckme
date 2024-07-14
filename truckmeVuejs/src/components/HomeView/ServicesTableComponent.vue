@@ -18,12 +18,12 @@
 <script setup lang="ts">
 import type { Component } from 'vue'
 
-import ServiceCard from './ServiceCardComponent.vue'
+import ServiceCard from '@/components/HomeView/ServiceCardComponent.vue'
 
-import PadlockIcon from './icons/PadlockIcon.vue'
-import ComplianceIcon from './icons/ComplianceIcon.vue'
-import ContractIcon from './icons/ContractIcon.vue'
-import ContractSearchIcon from './icons/ContractSearchIcon.vue'
+import PadlockIcon from '@/components/icons/PadlockIcon.vue'
+import ComplianceIcon from '@/components/icons/ComplianceIcon.vue'
+import ContractIcon from '@/components/icons/ContractIcon.vue'
+import ContractSearchIcon from '@/components/icons/ContractSearchIcon.vue'
 
 type Service = {
   icon: Component

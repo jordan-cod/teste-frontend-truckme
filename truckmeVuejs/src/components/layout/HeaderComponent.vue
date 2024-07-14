@@ -2,7 +2,7 @@
   <header>
     <nav>
       <a href="index.html">
-        <img src="../assets/images/logo.png" alt="truckme logotipo" />
+        <img src="@/assets/images/logo.png" alt="truckme logotipo" />
       </a>
       <ul :class="['menu', {active: isMenuOpen}]">
         <li><RouterLink to="/" class="link">Home</RouterLink></li>

@@ -1,7 +1,7 @@
 <template>
   <footer>
     <div>
-      <img src="../assets/images/full-logo.png" />
+      <img src="@/assets/images/full-logo.png" />
     </div>
     <nav>
       <ul>

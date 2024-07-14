@@ -3,7 +3,7 @@
     <div>
       <div>
         <div>
-          <img src="../assets/images/contact.png" alt="Entre em contato" />
+          <img src="@/assets/images/contact.png" alt="Entre em contato" />
         </div>
         <h3>Entre em contato</h3>
         <p>

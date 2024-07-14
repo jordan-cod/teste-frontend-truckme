@@ -12,12 +12,12 @@
           eficiência para o seu negócio.
         </p>
         <div>
-          <img src="../assets/images/truck.png" alt="" class="truckImg" />
+          <img src="@/assets/images/truck.png" alt="" class="truckImg" />
         </div>
       </div>
       <div id="additional-text" v-show="isVisible">
         <div>
-          <img src="../assets/images/full-logo.png" alt="logo" />
+          <img src="@/assets/images/full-logo.png" alt="logo" />
         </div>
         <div>
           <h3>Solução Inteligente em Fretes</h3>

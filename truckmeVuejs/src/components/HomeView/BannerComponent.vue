@@ -15,7 +15,7 @@
 <style scoped>
 #hero{
     height: 85vh;
-    background-image: url('../assets//images/banner-1.png');
+    background-image: url('@/assets//images/banner-1.png');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;

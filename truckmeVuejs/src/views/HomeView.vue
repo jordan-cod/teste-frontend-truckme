@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import BannerComponent from '@/components/BannerComponent.vue';
-import AboutComponent from '@/components/AboutComponent.vue';
-import ServicesTableComponent from '@/components/ServicesTableComponent.vue';
-import ContactFormComponent from '@/components/ContactFormComponent.vue';
-import GalleryComponent from '@/components/GalleryComponent.vue';
+import BannerComponent from '@/components/HomeView/BannerComponent.vue';
+import AboutComponent from '@/components/HomeView/AboutComponent.vue';
+import ServicesTableComponent from '@/components/HomeView/ServicesTableComponent.vue';
+import ContactFormComponent from '@/components/HomeView/ContactFormComponent.vue';
+import GalleryComponent from '@/components/HomeView/GalleryComponent.vue';
 
 </script>
 
