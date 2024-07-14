@@ -324,6 +324,34 @@ header nav .menu li a:hover{
     cursor: not-allowed;
     background: var(--truck-gray) !important;
 }
+.hidden {
+    height: 0;
+    overflow: hidden;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s ease-out, max-height 0.5s ease-out;
+}
+
+.visible {
+    height: auto;
+    transform: scaleY(1);
+}
+
+#read-more{
+    background-color: var(--truck-orange);
+    color: var(--truck-white);
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    width: 300px;
+    align-self: center;
+    transition: transform 0.2s ease-in-out;
+}
+#read-more:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
 footer{
     background-color: var(--truck-black);
     display: grid;

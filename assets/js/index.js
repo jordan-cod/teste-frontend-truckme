@@ -150,3 +150,21 @@ function prevSlide() {
 
 nextBtn.addEventListener('click', nextSlide);
 prevBtn.addEventListener('click', prevSlide);
+
+
+
+
+const readMoreBtn = document.getElementById('read-more');
+const additionalText = document.getElementById('additional-text');
+
+readMoreBtn.addEventListener('click', () => {
+    if (additionalText.classList.contains('hidden')) {
+        additionalText.classList.remove('hidden');
+        additionalText.classList.add('visible');
+        readMoreBtn.textContent = 'Leia menos';
+    } else {
+        additionalText.classList.remove('visible');
+        additionalText.classList.add('hidden');
+        readMoreBtn.textContent = 'Leia mais';
+    }
+});
