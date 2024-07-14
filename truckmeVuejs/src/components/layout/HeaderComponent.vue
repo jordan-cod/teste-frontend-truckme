@@ -25,7 +25,7 @@ import { ref, type Ref } from 'vue';
 const isMenuOpen: Ref<boolean> = ref(false);
 
   function toggleMenu() {
-    isMenuOpen.value = !isMenuOpen.value
+    isMenuOpen.value = !isMenuOpen.value;
   }
 </script>
 

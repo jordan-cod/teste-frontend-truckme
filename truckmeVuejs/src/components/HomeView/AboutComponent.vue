@@ -44,7 +44,7 @@ import { ref, type Ref } from 'vue';
 const isVisible: Ref<boolean> = ref(false);
 
   function toggleViewMore() {
-    isVisible.value = !isVisible.value
+    isVisible.value = !isVisible.value;
   }
 </script>
 

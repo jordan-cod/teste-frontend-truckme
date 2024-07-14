@@ -15,14 +15,26 @@
 
 <script setup lang="ts">
 import { defineProps } from 'vue';
-import type { Component } from 'vue'
+import type { Component } from 'vue';
 
 const props = defineProps({
-  icon: Object as () => Component,
-  title: String,
-  description: String,
-  value: Number
-})
+  icon: {
+    type: Object as () => Component,
+    default: null
+  },
+  title: {
+    type: String,
+    default: ''
+  },
+  description: {
+    type: String,
+    default: ''
+  },
+  value: {
+    type: Number,
+    default: 0
+  }
+});
 </script>
 
 <style scoped>

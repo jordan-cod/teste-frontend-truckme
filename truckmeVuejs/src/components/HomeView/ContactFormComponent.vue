@@ -57,7 +57,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref } from 'vue';
 
 type FormType = {
   name: string
@@ -69,32 +69,32 @@ const formData = ref<FormType>({
   name: '',
   email: '',
   message: ''
-})
+});
 
 const errors = ref<FormType>({
   name: '',
   email: '',
   message: ''
-})
+});
 
-const submitting = ref<boolean>(false)
-const statusMessage = ref<string>('')
-const statusClass = ref<string>('')
+const submitting = ref<boolean>(false);
+const statusMessage = ref<string>('');
+const statusClass = ref<string>('');
 
 function showError(field: keyof FormType, message: string): void {
-  errors.value[field] = message
-  return
+  errors.value[field] = message;
+  return;
 }
 
 function showStatusMessage(message: string, type: string): void {
-  statusMessage.value = message
-  statusClass.value = type
+  statusMessage.value = message;
+  statusClass.value = type;
 
   setTimeout(() => {
-    statusMessage.value = ''
-    statusClass.value = ''
-  }, 5000)
-  return
+    statusMessage.value = '';
+    statusClass.value = '';
+  }, 5000);
+  return;
 }
 
 function removeErrorMessages(): void {
@@ -102,50 +102,50 @@ function removeErrorMessages(): void {
     name: '',
     email: '',
     message: ''
-  }
-  return
+  };
+  return;
 }
 
 function isValidEmail(email: string): boolean {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
 function submitForm(): void {
-  removeErrorMessages()
+  removeErrorMessages();
 
-  let isValid = true
+  let isValid = true;
 
   if (formData.value.name.trim() === '') {
-    showError('name', 'Por favor, insira seu nome.')
-    isValid = false
+    showError('name', 'Por favor, insira seu nome.');
+    isValid = false;
   } else if (formData.value.name.length > 100) {
-    showError('name', 'O nome deve ter no máximo 100 caracteres.')
-    isValid = false
+    showError('name', 'O nome deve ter no máximo 100 caracteres.');
+    isValid = false;
   }
 
   if (formData.value.email.trim() === '') {
-    showError('email', 'Por favor, insira seu email.')
-    isValid = false
+    showError('email', 'Por favor, insira seu email.');
+    isValid = false;
   } else if (!isValidEmail(formData.value.email.trim())) {
-    showError('email', 'Por favor, insira um email válido.')
-    isValid = false
+    showError('email', 'Por favor, insira um email válido.');
+    isValid = false;
   } else if (formData.value.email.length > 100) {
-    showError('email', 'O email deve ter no máximo 100 caracteres.')
-    isValid = false
+    showError('email', 'O email deve ter no máximo 100 caracteres.');
+    isValid = false;
   }
 
   if (formData.value.message.trim() === '') {
-    showError('message', 'Por favor, insira uma mensagem.')
-    isValid = false
+    showError('message', 'Por favor, insira uma mensagem.');
+    isValid = false;
   } else if (formData.value.message.length > 255) {
-    showError('message', 'A mensagem deve ter no máximo 255 caracteres.')
-    isValid = false
+    showError('message', 'A mensagem deve ter no máximo 255 caracteres.');
+    isValid = false;
   }
 
   if (isValid) {
     // Simulação de envio para o backend
-    submitting.value = true
-    const url = 'https://jsonplaceholder.typicode.com/posts'
+    submitting.value = true;
+    const url = 'https://jsonplaceholder.typicode.com/posts';
     fetch(url, {
       method: 'POST',
       body: JSON.stringify({
@@ -156,25 +156,24 @@ function submitForm(): void {
     })
       .then((response) => {
         if (!response.ok) {
-          throw new Error('Erro ao enviar mensagem.')
+          throw new Error('Erro ao enviar mensagem.');
         }
-        return response.json()
+        return response.json();
       })
       .then(() => {
         formData.value = {
           name: '',
           email: '',
           message: ''
-        }
-        showStatusMessage('Mensagem enviada com sucesso!', 'success')
+        };
+        showStatusMessage('Mensagem enviada com sucesso!', 'success');
       })
-      .catch((error) => {
-        console.error('Erro:', error)
-        showStatusMessage('Erro ao enviar mensagem. Tente novamente mais tarde.', 'error')
+      .catch(() => {
+        showStatusMessage('Erro ao enviar mensagem. Tente novamente mais tarde.', 'error');
       })
       .finally(() => {
-        submitting.value = false
-      })
+        submitting.value = false;
+      });
   }
 }
 </script>
