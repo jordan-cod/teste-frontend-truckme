@@ -5,7 +5,7 @@
         <img src="../assets/images/logo.png" alt="truckme logotipo" />
       </a>
       <ul :class="['menu', {active: isMenuOpen}]">
-        <li><a href="index.html" class="link">Home</a></li>
+        <li><RouterLink to="/" class="link">Home</RouterLink></li>
         <li><a href="#about" class="link">Sobre</a></li>
         <li><a href="#services" class="link">Serviços</a></li>
         <li><a href="#contact" class="link">Contato</a></li>
