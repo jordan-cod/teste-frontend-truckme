@@ -10,7 +10,6 @@ module.exports = {
     '@vue/eslint-config-prettier/skip-formatting'
   ],
   rules: {
-    // Exemplos de regras adicionais
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'warn', // Proíbe o uso de console.log em produção
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'warn', // Proíbe o uso de debugger em produção
     'vue/no-unused-vars': 'error', // Proíbe variáveis não utilizadas em arquivos Vue
