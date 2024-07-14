@@ -193,6 +193,91 @@ header nav .menu li a:hover{
     padding: 0px 20px;
     width: 180px;
 }
+#contact{
+    padding: 75px 0px;
+}
+#contact > div{
+    width: 1080px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+}
+#contact  > div > div > div:first-child{
+    display: flex;
+    justify-content: center;
+}
+#contact  > div > div{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+#contact > div form{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    width: 615px;
+}
+#contact > div form input, #contact > div form textarea{
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #D2D5DA;
+    -webkit-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.05);
+    -moz-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.05);
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.05);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#contact > div form textarea{
+    height: 150px;
+}
+#contact > div form label{
+    position: absolute;
+    top: -12px;
+    left: 10px;
+    font-weight: 500;
+    font-size: .9rem;
+    background: var(--truck-white);
+}
+#contact > div form label span{
+    color: red;
+}
+#contact > div form button{
+    background-color: var(--truck-orange);
+    border: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--truck-white);
+    border-radius: 8px;
+    height: 60px;
+}
+#contact > div form div{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+#contact > div form input.invalid, #contact > div form textarea.invalid{
+    border: 1px solid red;
+}
+#status-message{
+    display: none;
+}
+.error {
+    color: red;
+    font-size: 0.875em;
+    display: block;
+}
+.success {
+    color: green;
+    font-size: 0.875em;
+    display: block;
+}
+.disabled{
+    cursor: not-allowed;
+    background: var(--truck-gray) !important;
+}
 
 @media (max-width: 1080px) {
     header nav, #about{
@@ -201,14 +286,14 @@ header nav .menu li a:hover{
     #hero div h1{
         font-size: 2rem;
     }
-    #about > div{
+    #about > div, #services > div, #contact > div{
         width: 100%;
     }
-    #services{
+    #about > div h2, #about > div h3, #services > div h2{
+        text-align: center;
+    }
+    #services, #contact{
         padding: 75px 15px;
-    }
-    #services > div{
-        width: 100%;
     }
 }
 @media (max-width: 920px) {
@@ -315,5 +400,8 @@ header nav .menu li a:hover{
     }
     .truckImg{
         max-width: 100%;
+    }
+    #contact > div form{
+        width: 100%;
     }
 }
