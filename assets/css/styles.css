@@ -193,6 +193,46 @@ header nav .menu li a:hover{
     padding: 0px 20px;
     width: 180px;
 }
+#partnerships{
+    padding: 50px 0px;
+}
+.carousel {
+    width: 1080px;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    flex: 0 0 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.carousel-item div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-controls {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.carousel-controls button{
+    background-color: var(--truck-orange);
+    border: none;
+    color: var(--truck-white);
+    padding: 10px;
+    border-radius: 5px;
+}
 #contact{
     padding: 75px 0px;
 }
@@ -329,6 +369,18 @@ footer p a{
     #services, #contact{
         padding: 75px 15px;
     }
+    #partnerships{
+        text-align: center;
+    }
+    #partnerships h2{
+        margin-bottom: 80px;
+    }
+    .carousel {
+        width: 500px;
+        overflow: hidden;
+        position: relative;
+        margin: 0 auto;
+    }
 }
 @media (max-width: 920px) {
     #hero div{
@@ -437,6 +489,15 @@ footer p a{
     }
     #contact > div form{
         width: 100%;
+    }
+    .carousel {
+        width: 300px;
+        overflow: hidden;
+        position: relative;
+        margin: 0 auto;
+    }
+    .carousel img{
+        max-width: 280px;
     }
     footer{
         grid-template-columns: 1fr;

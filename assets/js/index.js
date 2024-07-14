@@ -120,3 +120,33 @@ document.getElementById('contact-form').addEventListener('submit', function(even
         })
     }
 });
+
+
+const carouselInner = document.querySelector('.carousel-inner');
+const carouselItems = document.querySelectorAll('.carousel-item');
+const carousel = document.querySelector('.carousel');
+const prevBtn = document.getElementById('prev');
+const nextBtn = document.getElementById('next');
+    
+let currentIndex = 0;
+const totalItems = carouselItems.length;
+const itemWidth = carousel.offsetWidth;
+
+function goToSlide(index) {
+    if (index < 0 || index >= totalItems) return;
+
+    currentIndex = index;
+    const translateValue = -currentIndex * itemWidth;
+    carouselInner.style.transform = `translateX(${translateValue}px)`;
+}
+
+function nextSlide() {
+    goToSlide(currentIndex + 1);
+}
+
+function prevSlide() {
+    goToSlide(currentIndex - 1);
+}
+
+nextBtn.addEventListener('click', nextSlide);
+prevBtn.addEventListener('click', prevSlide);
